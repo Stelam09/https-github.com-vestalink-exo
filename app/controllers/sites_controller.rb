@@ -21,7 +21,17 @@ class SitesController < ApplicationController
   def edit
   	@site = site.find(params[:id])
   end
-
+  
+  def update
+	  @site = Site.find(params[:id])
+	 
+	  if @site.update(site_params)
+	    redirect_to @site
+	  else
+	    render 'edit'
+	  end
+  end
+  
   private
   def site_params
     params.require(:site).permit(:reference_site, :nom, :address_line1, :zipcode, :city)

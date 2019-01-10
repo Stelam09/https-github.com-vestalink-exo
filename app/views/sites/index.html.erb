@@ -17,6 +17,8 @@
 		  	<td><%= site.address_line1 %></td>
 		  	<td><%= site.zipcode %></td>
 		  	<td><%= site.city %></td>
+		  	<td><%= link_to 'Show', site_path(site) %></td>
+		  	<td><%= link_to 'Edit', edit_site_path(site) %></td>
 			</tr>
 		<% end %>
 	</tbody>

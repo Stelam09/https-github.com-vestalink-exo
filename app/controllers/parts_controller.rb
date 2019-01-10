@@ -14,14 +14,6 @@ class PartsController < ApplicationController
   	redirect_to @part
   end
 
-  def show
-  	@part = Part.find(params[:id])
-  end
-
-  def edit
-  	@part = Part.find(params[:id])
-  end
-
   private
   def part_params
     params.require(:part).permit(:reference_part, :reference_site, :part_type_designation)
