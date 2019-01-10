@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  get 'sites/index'
-  get 'pages/home'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'parts/index'
+  resources :sites do
+	collection {post :import}
+  end
+  root to: "sites#index"
 end
+

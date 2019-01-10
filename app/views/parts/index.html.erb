@@ -1,0 +1,26 @@
+<table>
+	<thead>
+		<tr>
+			<th>Référence Lot</th>
+			<th>Référence site</th>
+			<th>Type de Lot</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @parts.each do |part| %>
+		  <tr>
+		  	<td><%= part.reference_part %></td>
+		  	<td><%= part.reference_site %></td>
+		  	<td><%= part.part_type_designation %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<div>
+	<h4> Import Data </h4>
+		<%= form_tag import_parts_path, multipart:true do %>
+			<%= file_field_tag :file %>
+			<%= submit_tag "Import CSV" %>
+		<% end %>
+</div>
