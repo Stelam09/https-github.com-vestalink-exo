@@ -1,4 +1,9 @@
 class PartsController < ApplicationController
+  
+  def new
+  	@part = Part.new
+  end
+ 
   def index
   	@parts = Site.all
   end

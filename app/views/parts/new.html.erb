@@ -1,0 +1,15 @@
+<%= form_with scope: :part, local: true do |form| %>
+  <p>
+    <%= form.label :reference_part %><br>
+    <%= form.text_field :reference_part %>
+  </p>
+ 
+  <p>
+    <%= form.label :part_type_designation %><br>
+    <%= form.text_area :part_type_designation %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

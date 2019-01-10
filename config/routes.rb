@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'parts' => 'parts#index'
-  post 'parts' => 'parts#create'
-  
-  
+  get 'pages/home'
+  root 'pages#home'
+  resources :parts
+  resources :sites
 end
 

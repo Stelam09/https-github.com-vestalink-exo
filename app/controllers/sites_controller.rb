@@ -1,4 +1,9 @@
 class SitesController < ApplicationController
+  
+  def new
+  	@site = Site.new
+  end
+ 
   def index
   	@sites = Site.all
   end
