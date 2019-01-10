@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 class Part < ApplicationRecord
 
 	self.table_name = 'parts'

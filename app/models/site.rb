@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 class Site < ApplicationRecord
   self.table_name = 'sites'
   validates_uniqueness_of(:reference_site)

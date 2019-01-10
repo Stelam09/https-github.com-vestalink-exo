@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 class SitesController < ApplicationController
   
   def new
@@ -31,7 +33,7 @@ class SitesController < ApplicationController
 	    render 'edit'
 	  end
   end
-  
+
   private
   def site_params
     params.require(:site).permit(:reference_site, :nom, :address_line1, :zipcode, :city)
