@@ -1,0 +1,31 @@
+<%= flash[:notice] %>
+<table>
+	<thead>
+		<tr>
+			<th>Référence site</th>
+			<th>Nom</th>
+			<th>Adresse</th>
+			<th>Code Postal</th>
+			<th>Ville</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @sites.each do |site| %>
+		  <tr>
+		  	<td><%= site.reference_site %></td>
+		  	<td><%= site.nom %></td>
+		  	<td><%= site.address_line1 %></td>
+		  	<td><%= site.zipcode %></td>
+		  	<td><%= site.city %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<div>
+	<h4> Import Data </h4>
+		<%= form_tag import_users_path, multipart:true do %>
+			<%= file_field_tag :file %>
+			<%= submit_tag "Import CSV" %>
+		<% end %>
+</div>

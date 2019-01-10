@@ -1,5 +1,4 @@
 require_relative 'boot'
-
 require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
@@ -8,10 +7,10 @@ Bundler.require(*Rails.groups)
 
 module Projet
   class Application < Rails::Application
- 
+    config.encoding = "utf-8"
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
-     config.encoding = "utf-8"
+     
 	 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
