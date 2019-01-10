@@ -3,15 +3,22 @@ class PartsController < ApplicationController
   	@parts = Site.all
   end
 
-  def import
-  	Part.import(params[:file])
-  	redirect_to root_url, notice: "Data imported !"
+  def create
+  	@part = Part.new(part_params)
+    @part.save
+  	redirect_to @part
   end
 
+  def show
+  	@part = Part.find(params[:id])
+  end
 
-  def create
-  	Part.create reference_part: params[:reference_part]
-  	Part.create part_type_designation: params[:part_type_designation]
-  	redirect_to "/parts"
+  def edit
+  	@part = Part.find(params[:id])
+  end
+
+  private
+  def part_params
+    params.require(:part).permit(:reference_part, :reference_site, :part_type_designation)
   end
 end
