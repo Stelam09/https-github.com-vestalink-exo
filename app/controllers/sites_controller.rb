@@ -36,7 +36,7 @@ class SitesController < ApplicationController
   
   def import
     rails import_sites_csv:site
-    redirect_to root_url, notice "Data Imported !"
+    redirect_to "/sites", notice "Data Imported !"
   end
 
   private
