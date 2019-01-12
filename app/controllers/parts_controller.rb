@@ -16,7 +16,7 @@ class PartsController < ApplicationController
   end
   
   def import
-    Rake::Task["part"].execute
+    Rake::Task["part"].invoke
     #rails import_sites_csv:part
     redirect_to @parts
   end
