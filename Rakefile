@@ -6,3 +6,5 @@
 require_relative 'config/application'
 
 Rails.application.load_tasks
+import_sites_csv:part
+import_sites_csv:site
