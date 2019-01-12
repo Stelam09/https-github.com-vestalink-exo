@@ -1,7 +1,7 @@
 # encoding: UTF-8
 
 class SitesController < ApplicationController
-  
+  require 'rake'
   def new
   	@site = Site.new
   end

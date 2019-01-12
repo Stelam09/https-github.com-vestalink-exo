@@ -1,5 +1,5 @@
 # encoding: UTF-8
-
+require 'rake'
 class PartsController < ApplicationController
   def new
   	@part = Part.new
