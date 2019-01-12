@@ -4,7 +4,10 @@
 # for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
 
 require_relative 'config/application'
+require 'rake'
+require 'rake/dsl_definition'
+require 'rake/testtask'
+require 'rdoc/task'
 
+require 'tasks/rails'
 Rails.application.load_tasks
-import_sites_csv:part
-import_sites_csv:site
