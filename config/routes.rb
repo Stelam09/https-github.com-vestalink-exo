@@ -9,8 +9,5 @@ Rails.application.routes.draw do
 	collection {post :import}
   end
   
-  resources :pages do
-	collection {post :import}
-  end
 end
 
