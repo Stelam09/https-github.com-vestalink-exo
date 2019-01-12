@@ -2,7 +2,7 @@
 <p>Find me in app/views/pages/home.html.erb</p>
 <div>
 	<h4> Import Data </h4>
-		<%= form_tag import_parts_path, multipart:true do %>
+		<%= form_tag import_pages_path, multipart:true do %>
 			<%= file_field_tag :file %>
 			<%= submit_tag "Import CSV" %>
 		<% end %>

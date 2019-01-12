@@ -5,6 +5,6 @@ class PagesController < ApplicationController
 		
 		rails import:site
   rails import:part
-  redirect_to root_url, notice "Data Imported !"
+ 
 	end
 end
