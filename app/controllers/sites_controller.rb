@@ -35,7 +35,8 @@ class SitesController < ApplicationController
   end
   
   def import
-    rails import_sites_csv:site
+    #rails import_sites_csv:site
+    Rake::Task["site"].execute
     redirect_to @sites
   end
 
