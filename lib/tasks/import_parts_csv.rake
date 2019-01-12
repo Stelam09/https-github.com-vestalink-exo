@@ -1,6 +1,5 @@
-namespace :import do
-
-  desc "Import Parts from CSV file"
+namespace :import_parts_csv do
+	desc "Import parts from CSV file"
 
   task part: :environment do
     CSV.foreach('data/parts.csv', headers: true) do |row|
