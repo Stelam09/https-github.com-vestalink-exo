@@ -17,3 +17,9 @@
 	</tbody>
 </table>
 
+<div>
+	<h4> Import Data </h4>
+		<%= form_tag import_parts_path, multipart:true do %>
+			<%= submit_tag "Import CSV" %>
+		<% end %>
+</div>

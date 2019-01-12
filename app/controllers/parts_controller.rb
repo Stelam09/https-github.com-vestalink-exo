@@ -14,6 +14,11 @@ class PartsController < ApplicationController
     @part.save
   	redirect_to @part
   end
+  
+  def import
+    rails import_sites_csv:part
+    redirect_to root_url, notice "Data Imported !"
+  end
 
   private
   def part_params

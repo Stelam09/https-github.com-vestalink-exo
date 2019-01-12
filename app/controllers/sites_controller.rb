@@ -33,6 +33,11 @@ class SitesController < ApplicationController
 	    render 'edit'
 	  end
   end
+  
+  def import
+    rails import_sites_csv:site
+    redirect_to root_url, notice "Data Imported !"
+  end
 
   private
   def site_params
