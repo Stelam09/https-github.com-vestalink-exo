@@ -17,7 +17,7 @@ class PartsController < ApplicationController
   
   def import
     rails import_sites_csv:part
-    redirect_to "/parts", notice "Data Imported !"
+    redirect_to @parts
   end
 
   private
