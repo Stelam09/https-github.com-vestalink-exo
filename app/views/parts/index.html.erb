@@ -10,9 +10,10 @@
 	</thead>
 	<tbody>
 		<% @parts.includes(:reference_site).each do |part| %>
+		 <% site = Site.where(reference_site: part.reference_site.reference_site).first %>
 		  <tr>
 		  	<td><%= part.reference_part %></td>
-		  	<td><%= part.reference_site.reference_site %></td>
+		  	<td><%= link_to part.reference_site.reference_site, site_path(site) %>
 		  	<td><%= part.part_type_designation %></td>
 			</tr>
 		<% end %>
