@@ -1,32 +1,33 @@
-<%= flash[:notice] %>
+<%= flash[:success] %>
 <table>
-	<thead>
-		<tr>
-			<th>Référence site</th>
-			<th>Nom</th>
-			<th>Adresse</th>
-			<th>Code Postal</th>
-			<th>Ville</th>
-		</tr>
-	</thead>
-	<tbody>
-		<% @sites.each do |site| %>
-		  <tr>
-		  	<td><%= site.reference_site %></td>
-		  	<td><%= site.nom %></td>
-		  	<td><%= site.address_line1 %></td>
-		  	<td><%= site.zipcode %></td>
-		  	<td><%= site.city %></td>
-		  	<td><%= link_to 'Show', site_path(site) %></td>
-		  	<td><%= link_to 'Edit', edit_site_path(site) %></td>
-			</tr>
-		<% end %>
-	</tbody>
+  <thead>
+    <tr>
+      <th>Référence site</th>
+      <th>Nom</th>
+      <th>Adresse</th>
+      <th>Code Postal</th>
+      <th>Ville</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @sites.each do |site| %>
+      <tr>
+        <td><%= site.reference_site %></td>
+        <td><%= site.nom %></td>
+        <td><%= site.address_line1 %></td>
+        <td><%= site.zipcode %></td>
+        <td><%= site.city %></td>
+        <td><%= link_to 'Show', site_path(site) %></td>
+        <td><%= link_to 'Edit', edit_site_path(site) %></td>
+        <td><%= link_to 'Add parts', "/parts/new?reference_site_id=#{site.id}" %></td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
 
 <div>
-	<h4> Import Data </h4>
-		<%= form_tag import_sites_path, multipart:true do %>
-			<%= submit_tag "Import CSV" %>
-		<% end %>
+  <h4> Import Data </h4>
+    <%= form_tag import_sites_path, multipart:true do %>
+      <%= submit_tag "Import CSV" %>
+    <% end %>
 </div>

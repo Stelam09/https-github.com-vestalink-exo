@@ -1,4 +1,5 @@
 # encoding: UTF-8
+Rails.application.load_tasks
 
 class SitesController < ApplicationController
   require 'rake'
@@ -35,9 +36,9 @@ class SitesController < ApplicationController
   end
   
   def import
-    #rails import_sites_csv:site
-    Rake::Task["import_sites_csv:site"].invoke
-    redirect_to @sites
+    Rake::Task['import_sites_csv:site'].invoke
+    flash[:success] = 'Data Imported'
+    redirect_to action: 'index'
   end
 
   private

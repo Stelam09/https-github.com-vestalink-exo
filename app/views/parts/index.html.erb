@@ -1,3 +1,5 @@
+<%= flash[:success] %>
+
 <table>
 	<thead>
 		<tr>
@@ -7,10 +9,10 @@
 		</tr>
 	</thead>
 	<tbody>
-		<% @parts.each do |part| %>
+		<% @parts.includes(:reference_site).each do |part| %>
 		  <tr>
 		  	<td><%= part.reference_part %></td>
-		  	<td><%= part.reference_site %></td>
+		  	<td><%= part.reference_site.reference_site %></td>
 		  	<td><%= part.part_type_designation %></td>
 			</tr>
 		<% end %>

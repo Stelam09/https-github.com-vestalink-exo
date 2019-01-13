@@ -1,4 +1,4 @@
-<%= form_with scope: :part, local: true do |form| %>
+<%= form_for @part, url: { action: "create" } do |form| %>
   <p>
     <%= form.label :reference_part %><br>
     <%= form.text_field :reference_part %>
@@ -8,6 +8,7 @@
     <%= form.label :part_type_designation %><br>
     <%= form.text_area :part_type_designation %>
   </p>
+  <%= form.text_field :reference_site_id, style: "display:none", value: @part.reference_site_id %>
  
   <p>
     <%= form.submit %>

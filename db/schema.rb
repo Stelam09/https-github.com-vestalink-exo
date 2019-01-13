@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_10_191028) do
+ActiveRecord::Schema.define(version: 2019_01_13_151824) do
 
   create_table "parts", force: :cascade do |t|
     t.string "reference_part"
     t.integer "reference_site_id"
-    t.string "Appartement"
+    t.string "part_type_designation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["reference_site_id"], name: "index_parts_on_reference_site_id"
