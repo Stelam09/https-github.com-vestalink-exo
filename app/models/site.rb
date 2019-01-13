@@ -7,8 +7,8 @@ class Site < ApplicationRecord
   
 
   def self.return_adress_link_google_maps(adress)
-  	require 'geokit'
-    include GeoKit::Geocoders
+  	# require 'geokit'
+   #  include GeoKit::Geocoders
 
     coords = MultiGeocoder.geocode(adress)
 
