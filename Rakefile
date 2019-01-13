@@ -5,10 +5,9 @@
 
 require_relative 'config/application'
 require 'rake'
-require 'rake/dsl_definition'
-require 'rdoc/task'
-require 'rake/testtask'
-
+# require 'rake/dsl_definition'
+# require 'rake/testtask'
+# require 'rdoc/task'
 # require 'rspec/rails/tasks/rspec.rake'
-require 'tasks/rails'
+# require 'tasks/rails'
 Rails.application.load_tasks

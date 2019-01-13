@@ -1,4 +1,5 @@
-require 'rake'
+require 'csv'
+
 namespace :import_sites_csv do
 	desc "Import sites from CSV file"
 

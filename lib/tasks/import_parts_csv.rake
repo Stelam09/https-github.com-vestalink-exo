@@ -1,3 +1,5 @@
+require 'csv'
+
 namespace :import_parts_csv do
 	desc "Import parts from CSV file"
 
